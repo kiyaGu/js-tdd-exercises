@@ -13,13 +13,34 @@
  */
 
 function removeVowels(phrase) {
-    return phrase.replace(/[aeiou]/g, '');
+    return phrase.replace(/[aeiou]/gi, '');
 }
 
 /*
 This is a sample test - remove it and write AT LEAST 5 more tests to prove the function works as expected  
-test('removeVowels should remove the Os', function(){
+*/
+
+test('removeVowels should remove the Os', function() {
     var result = removeVowels('Tom');
     expect(result).toBe('Tm');
 });
-*/
+
+test('removeVowels should remove the Os', function() {
+    var result = removeVowels('node girls');
+    expect(result).toBe('nd grls');
+});
+
+test('removeVowels should remove the Os', function() {
+    var result = removeVowels('how are you today?');
+    expect(result).toBe('hw r y tdy?');
+});
+
+test('removeVowels should remove the Os', function() {
+    var result = removeVowels('KIYA');
+    expect(result).toBe('KY');
+});
+
+test('removeVowels should remove the Os', function() {
+    var result = removeVowels('CodeYourFuture');
+    expect(result).toBe('CdYrFtr');
+});
