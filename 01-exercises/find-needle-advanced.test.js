@@ -1,8 +1,16 @@
 function findMultipleNeedles(haystackArray) {
     // ToDo: Implement this function to make all the tests below pass
     // DO NOT Change the tests (you can add more tests though)
-}
+    var indexOfNeedles = []
 
+    if (haystackArray.includes("needle")) {
+        for (var i = 0; i < haystackArray.length; i++) {
+            if (haystackArray[i] === "needle")
+                indexOfNeedles.push(i);
+        }
+    }
+    return indexOfNeedles;
+}
 
 test('the function returns an array of positions where a needle is found', function() {
     var haystack = ['needle', 'hay', 'rabbit', 'needle', 'hat'];
