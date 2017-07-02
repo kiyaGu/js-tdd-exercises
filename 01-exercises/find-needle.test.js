@@ -1,6 +1,8 @@
 function findNeedle(haystackArray) {
     // ToDo: Implement this function to make all the tests below pass
     // DO NOT Change the tests (you can add more tests though)
+
+    return haystackArray.indexOf("needle");
 }
 
 
@@ -14,7 +16,7 @@ test('the function returns zero if the element is the first item', function() {
 test('the function returns the array element where a needle is found', function() {
     var haystack = ['hay', 'rabbit', 'needle', 'hat'];
     var position = findNeedle(haystack);
-    
+
     expect(position).toBe(2);
 });
 
